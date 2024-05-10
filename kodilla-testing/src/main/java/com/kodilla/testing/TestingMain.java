@@ -8,19 +8,27 @@ public class TestingMain {
         Calculator numbers = new Calculator(10,5);
 
         double addResult = numbers.addAB();
-        System.out.println(addResult);
         double substractResult = numbers.substractAB();
-        System.out.println(substractResult);
 
 
         if (addResult == (15)){
-            System.out.println(" Numbers add test -  OK!!");
+            System.out.println("Numbers add test -  OK!!");
+        } else {
+            System.out.println("Error !!!");
+        }
+        if (addResult == (10)){
+            System.out.println("Numbers add test -  OK!!");
         } else {
             System.out.println("Error !!!");
         }
 
         if (substractResult == (5)){
-            System.out.println(" Numbers substract test -  OK!!");
+            System.out.println("Numbers substract test -  OK!!");
+        } else {
+            System.out.println("Error !!!");
+        }
+        if (substractResult == (10)){
+            System.out.println("Numbers substract test -  OK!!");
         } else {
             System.out.println("Error !!!");
         }
