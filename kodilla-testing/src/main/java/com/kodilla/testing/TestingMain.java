@@ -17,12 +17,10 @@ public class TestingMain {
 
         System.out.println("\nTest - pierwszy test jednostkowy:Calculator\n");
 
-
         Calculator numbers = new Calculator(10,5);
 
         double addResult = numbers.addAB();
         double substractResult = numbers.substractAB();
-
 
         if (addResult == (15)){
             System.out.println("Numbers add test -  OK!!");
