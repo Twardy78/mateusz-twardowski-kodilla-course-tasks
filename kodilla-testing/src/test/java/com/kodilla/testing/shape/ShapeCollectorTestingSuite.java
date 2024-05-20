@@ -5,6 +5,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -42,7 +43,7 @@ public class ShapeCollectorTestingSuite {
     @Nested
     class ShowingFigures {
 
-        @DisplayName("Test geting figure")
+        @DisplayName("Test getting figure")
         @Test
         void testGetFigure() {
             //Given
