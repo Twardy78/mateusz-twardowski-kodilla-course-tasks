@@ -11,5 +11,7 @@ public class StreamMainBeautifier {
         poemBeautifier.beautify("Martyna", (b) -> "^^^");
         poemBeautifier.beautify("Grazyna", (b) -> "+++");
         poemBeautifier.beautify("Mateusz", (b) -> "***");
+        poemBeautifier.beautify2("Bob", (b) -> "uuu" );
+        poemBeautifier.beautify2("Robert", (b) -> "**uuuiiiuuu**");
     }
 }

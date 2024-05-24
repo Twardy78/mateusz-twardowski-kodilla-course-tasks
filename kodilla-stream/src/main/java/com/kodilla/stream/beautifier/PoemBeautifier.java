@@ -7,4 +7,11 @@ public class PoemBeautifier {
         String result = poemDecorator.decorate(text);
         System.out.println(result + " " + text + " " + result);
     }
+    public void beautify2(String text, PoemDecorator poemDecorator){
+
+        String result = poemDecorator.decorate(text);
+        String capital = result.toUpperCase();
+        System.out.println(capital + " " + text + " " + capital);
+    }
+
 }
