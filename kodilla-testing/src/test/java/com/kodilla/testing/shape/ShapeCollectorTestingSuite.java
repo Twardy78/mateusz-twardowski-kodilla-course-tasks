@@ -40,6 +40,7 @@ public class ShapeCollectorTestingSuite {
             Assertions.assertEquals(0, shapeC.getShapeList().size());
         }
     }
+
     @Nested
     class ShowingFigures {
 

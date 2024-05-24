@@ -13,6 +13,6 @@ public class Square implements Shape {
     }
 
     public double getField() {
-        return sideLenght*sideLenght;
+        return sideLenght * sideLenght;
     }
 }

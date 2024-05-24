@@ -7,15 +7,15 @@ public class Calculator {
 
     public Calculator(double a, double b) {
         this.a = a;
-        this.b =b;
+        this.b = b;
     }
 
-    public double addAB(){
-        return a+b;
+    public double addAB() {
+        return a + b;
     }
 
-    public double substractAB(){
-        return a-b;
+    public double substractAB() {
+        return a - b;
     }
 
     public double getA() {

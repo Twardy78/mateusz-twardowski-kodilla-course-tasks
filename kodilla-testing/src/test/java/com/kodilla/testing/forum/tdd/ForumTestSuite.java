@@ -12,21 +12,23 @@ public class ForumTestSuite {
     private static int testCounter = 0;
 
     @BeforeAll
-    public static void beforeAllTests(){
+    public static void beforeAllTests() {
         System.out.println("This is the beginning if test.");
     }
+
     @AfterAll
-    public static void afterAllTests(){
+    public static void afterAllTests() {
         System.out.println("All tests are finished.");
     }
-   @BeforeEach
-    public void beforeEachTest(){
+
+    @BeforeEach
+    public void beforeEachTest() {
         testCounter++;
         System.out.println("Preparing to execute test #" + testCounter);
-   }
+    }
 
     @Nested
-    @DisplayName ("Test for posts")
+    @DisplayName("Test for posts")
     class TestPosts {
         //Test1
         @Test
@@ -40,6 +42,7 @@ public class ForumTestSuite {
             //Then
             Assertions.assertEquals(1, forumUser.getPostQuantity());
         }
+
         //TEst 3
         @Test
         void testGetPost() {
@@ -55,6 +58,7 @@ public class ForumTestSuite {
             //Then
             Assertions.assertEquals(thePost, retrievedPost);
         }
+
         //Test5
         @Test
         void testRemovePostNotExisting() {
@@ -69,6 +73,7 @@ public class ForumTestSuite {
             //Then
             Assertions.assertFalse(result);
         }
+
         //Test7
         @Test
         void testRemovePost() {
@@ -86,6 +91,7 @@ public class ForumTestSuite {
             Assertions.assertEquals(0, forumUser.getPostQuantity());
         }
     }
+
     @Nested
     @DisplayName("Test for comments")
     class TestComments {
@@ -109,7 +115,7 @@ public class ForumTestSuite {
         void testGetComment() {
             //Given
             ForumUser forumUser = new ForumUser("mrsmith", "John Smith");
-            ForumPost thePost = new ForumPost("mrsmith","Hello everyone, " +
+            ForumPost thePost = new ForumPost("mrsmith", "Hello everyone, " +
                     "this is my first contribution here!");
             ForumComment theComment = new ForumComment(thePost, "mrsmith",
                     "Thank you for all good words!");

@@ -41,7 +41,7 @@ class ForumTestSuite {
 
     @DisplayName(
             "When created SimpleUser with name, " +
-            "then getUsername should return correct name"
+                    "then getUsername should return correct name"
     )
     @Test
     void testCaseUsername() {

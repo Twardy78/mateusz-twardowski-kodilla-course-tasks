@@ -14,8 +14,9 @@ public class Triangle implements Shape {
     public String getShapeName() {
         return "Triangle";
     }
+
     @Override
     public double getField() {
-        return (hight + bottomSideLenght)/2;
+        return (hight + bottomSideLenght) / 2;
     }
 }

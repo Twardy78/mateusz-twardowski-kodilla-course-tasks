@@ -16,34 +16,41 @@ public class ForumUser {
         //real name of user
         this.realName = realName;
     }
-     public void addPost(String author, String postBody) {
-            ForumPost thePost = new ForumPost(author, postBody);
-            posts.add(thePost);
-     }
-     public void addComment(ForumPost thePost, String author, String commentBody) {
-            ForumComment theComment = new ForumComment(thePost, author, commentBody);
-            comments.add(theComment);
-     }
-     public int getPostQuantity() {
+
+    public void addPost(String author, String postBody) {
+        ForumPost thePost = new ForumPost(author, postBody);
+        posts.add(thePost);
+    }
+
+    public void addComment(ForumPost thePost, String author, String commentBody) {
+        ForumComment theComment = new ForumComment(thePost, author, commentBody);
+        comments.add(theComment);
+    }
+
+    public int getPostQuantity() {
         return posts.size();
-     }
-     public int getCommentQuantity() {
+    }
+
+    public int getCommentQuantity() {
         return comments.size();
-     }
-     public ForumPost getPost(int postNumber) {
-         if (postNumber >= 0 && postNumber < posts.size()) {
-             return posts.get(postNumber);
-         }
-         return null;
-     }
-     public ForumComment getComment(int commentNumber) {
+    }
+
+    public ForumPost getPost(int postNumber) {
+        if (postNumber >= 0 && postNumber < posts.size()) {
+            return posts.get(postNumber);
+        }
+        return null;
+    }
+
+    public ForumComment getComment(int commentNumber) {
         ForumComment theComment = null;
         if (commentNumber >= 0 && commentNumber < comments.size()) {
             theComment = comments.get(commentNumber);
         }
-         return theComment;
-     }
-     public boolean removePost(ForumPost thePost) {
+        return theComment;
+    }
+
+    public boolean removePost(ForumPost thePost) {
         boolean result = false;
         if (posts.contains(thePost)) {
             posts.remove(thePost);
@@ -51,9 +58,10 @@ public class ForumUser {
         }
         return result;
     }
+
     public boolean removeComment(ForumComment theComment) {
         boolean result = false;
-        if (comments.contains(theComment)){
+        if (comments.contains(theComment)) {
             comments.remove(theComment);
             result = true;
         }

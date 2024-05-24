@@ -22,7 +22,8 @@ public class WeatherForecastTestSuite {
     @Mock
     private Temperatures temperaturesMock;
 
-    @BeforeEach void test() {
+    @BeforeEach
+    void test() {
         Map<String, Double> temperaturesMap = new HashMap<>();
         temperaturesMap.put("Kraków", 23.1);
         temperaturesMap.put("Katowice", 21.4);
@@ -31,8 +32,9 @@ public class WeatherForecastTestSuite {
         temperaturesMap.put("Gdynia", 18.6);
         when(temperaturesMock.getTemperatures()).thenReturn(temperaturesMap);
     }
+
     @Test
-    void testWeatherForecastWithMock(){
+    void testWeatherForecastWithMock() {
         //Given
         WeatherForecast weatherForecast = new WeatherForecast(temperaturesMock);
         //When
@@ -40,8 +42,9 @@ public class WeatherForecastTestSuite {
         //Then
         Assertions.assertEquals(5, quantityOfSensors);
     }
+
     @Test
-    void testMeanTemparatureCalculation(){
+    void testMeanTemparatureCalculation() {
         //Given
         double expectedMeanTemp = 21.22;
         WeatherForecast weatherForecast = new WeatherForecast(temperaturesMock);
@@ -50,8 +53,9 @@ public class WeatherForecastTestSuite {
         //Then
         Assertions.assertEquals(expectedMeanTemp, meanValue);
     }
+
     @Test
-    void testMedianTemperatureCalculation(){
+    void testMedianTemperatureCalculation() {
         //Given
         double expextedMedianTemp = 21.40;
         WeatherForecast weatherForecast = new WeatherForecast(temperaturesMock);

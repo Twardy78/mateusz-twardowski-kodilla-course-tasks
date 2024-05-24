@@ -2,6 +2,7 @@ package com.kodilla.testing.collection;
 
 
 import org.junit.jupiter.api.*;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,15 +12,17 @@ public class CollectionTestSuite {
     private static OddNUmbersExterminator oddNumbersExterminator;
 
     @BeforeEach
-    public void beforeEach(){
+    public void beforeEach() {
         oddNumbersExterminator = new OddNUmbersExterminator();
         System.out.println("Test begin");
     }
+
     @AfterEach
     public void afterEach() {
         System.out.println("Test end");
     }
-    @DisplayName (
+
+    @DisplayName(
             "Checking if list is empty"
     )
 

@@ -49,17 +49,17 @@ public class Statistics {
     }
 
     public void showStatistics() {
-        System.out.println("User qty : " + userQty );
-        System.out.println("Post count : " + postCountQty );
-        System.out.println("Comment count : " + commentCountQty );
+        System.out.println("User qty : " + userQty);
+        System.out.println("Post count : " + postCountQty);
+        System.out.println("Comment count : " + commentCountQty);
         if (userQty > 0) {
-            System.out.println("Aver posts per user : " + averPostsPerUser );
-            System.out.println("Aver comments per user : " + averCommentsPerUser );
-        }else
+            System.out.println("Aver posts per user : " + averPostsPerUser);
+            System.out.println("Aver comments per user : " + averCommentsPerUser);
+        } else
             System.out.println("Average post or comments per user can't be divide by 0 !!!");
         if (postCountQty > 0) {
             System.out.println("Aver comments per post : " + averCommentsPerPost);
-        }else
+        } else
             System.out.println("Average comments per post can't be divide by 0 !!!");
     }
 }

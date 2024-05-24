@@ -17,7 +17,7 @@ public interface LibraryDatabase {
 
     //return all books borrowed by libraryUser to the library
     //returns number of book returned back
-    int returnBook (LibraryUser libraryUser);
+    int returnBook(LibraryUser libraryUser);
 }
 
 

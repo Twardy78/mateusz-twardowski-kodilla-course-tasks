@@ -71,6 +71,7 @@ public class StatisticsTestSuite {
             assertEquals(resultListOf1000Posts, theListOfQt1000Posts);
         }
     }
+
     @Nested
     @DisplayName("All Comments Tests")
     class AllCommentsTests {
@@ -139,6 +140,7 @@ public class StatisticsTestSuite {
             assertEquals(resultList100OfUserName.size(), the100OfUserList.size());
         }
     }
+
     public List<String> generateNUsers(int users) {
         List<String> listOfUsers = new ArrayList<>();
         for (int i = 1; i <= users; i++) {
