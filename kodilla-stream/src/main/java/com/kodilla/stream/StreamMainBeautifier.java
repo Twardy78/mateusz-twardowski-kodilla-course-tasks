@@ -1,10 +1,8 @@
 package com.kodilla.stream;
 
 import com.kodilla.stream.beautifier.PoemBeautifier;
-import com.kodilla.stream.lambda.*;
-import com.kodilla.stream.referance.FunctionalCalculator;
 
-public class StreamMain {
+public class StreamMainBeautifier {
     public static void main(String[] args) {
 
         PoemBeautifier poemBeautifier = new PoemBeautifier();
