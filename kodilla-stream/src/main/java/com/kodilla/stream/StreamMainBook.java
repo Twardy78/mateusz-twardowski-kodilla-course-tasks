@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 public class StreamMainBook {
     public static void main(String[] args) {
         BookDirectory theBookDirectory = new BookDirectory();
-        Map<String, Book> theResultListOfBook = theBookDirectory.getBookList().stream()
+        Map<String, Book> theResultListOfBook = theBookDirectory.getList().stream()
                 .filter(book -> book.getYearOfPublication() > 2005)
                 .collect(Collectors.toMap(Book::getSignature, book -> book));
 
