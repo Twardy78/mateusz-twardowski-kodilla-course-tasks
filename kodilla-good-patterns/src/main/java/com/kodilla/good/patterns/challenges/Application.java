@@ -1,7 +1,5 @@
 package com.kodilla.good.patterns.challenges;
 
-import org.junit.jupiter.api.Order;
-
 public class Application {
 
     public static void main(String[] args) {
