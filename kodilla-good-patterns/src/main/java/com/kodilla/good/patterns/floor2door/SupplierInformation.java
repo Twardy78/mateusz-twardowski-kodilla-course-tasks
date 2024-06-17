@@ -13,7 +13,4 @@ public class SupplierInformation {
         return supplierName;
     }
 
-    public String getSupplierAddress() {
-        return supplierAddress;
-    }
 }

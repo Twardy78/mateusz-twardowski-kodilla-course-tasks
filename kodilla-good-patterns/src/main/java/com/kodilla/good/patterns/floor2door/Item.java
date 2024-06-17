@@ -8,13 +8,6 @@ public class Item {
         this.itemName = itemName;
         this.itemQty = itemQty;
     }
-    public String getItemName() {
-        return itemName;
-    }
-
-    public double getItemQty() {
-        return itemQty;
-    }
 
     @Override
     public String toString() {
