@@ -7,6 +7,7 @@ public class ConnectionSearchProcess {
 
     public void searchFlightByDeparture(String departure) {
         Flights flightsList = new Flights();
+        System.out.println("Size : " + flightsList.flightsList().size());
 
         flightsList.flightsList().stream()
                 .filter(flight ->flight.getDeparture().equals(departure))

@@ -4,8 +4,8 @@ import java.util.*;
 
 public class Flights {
 
-    public List<Flight> flightsList() {
-        List<Flight> flights = new ArrayList<>();
+    public HashSet<Flight> flightsList() {
+        HashSet<Flight> flights = new HashSet<>();
         flights.add(new Flight("London", "Paris"));
         flights.add(new Flight("New York", "London"));
         flights.add(new Flight("New York", "Berlin"));
@@ -14,6 +14,10 @@ public class Flights {
         flights.add(new Flight("New York", "Paris"));
         flights.add(new Flight("New York", "Warsaw"));
         flights.add(new Flight("Warsaw", "Paris"));
+        flights.add(new Flight("New York", "Paris"));
+        flights.add(new Flight("New York", "Warsaw"));
+        flights.add(new Flight("New York", "Paris"));
         return flights;
     }
+
 }
