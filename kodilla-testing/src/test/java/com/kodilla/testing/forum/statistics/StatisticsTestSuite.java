@@ -95,7 +95,7 @@ public class StatisticsTestSuite {
             int theComments = statistics.statisticsData.commentsCount();
             int thePosts = statistics.statisticsData.postsCount();
             //Then
-            assertTrue(theComments < thePosts);
+            assertFalse(theComments < thePosts);
         }
 
         @DisplayName("Test more comments then posts")
