@@ -11,18 +11,6 @@ public class Board {
         this.doneList = doneList;
     }
 
-    public void addTaskToDoList(final String task) {
-        toDoList.addTask(task);
-    }
-
-    public void addTaskInProgress(final String task) {
-        inProgressList.addTask(task);
-    }
-
-    public void addTaskDone(final String task) {
-        doneList.addTask(task);
-    }
-
     public TaskList getToDoList() {
         return toDoList;
     }
