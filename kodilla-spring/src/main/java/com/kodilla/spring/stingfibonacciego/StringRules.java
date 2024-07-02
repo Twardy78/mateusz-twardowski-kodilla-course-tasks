@@ -6,7 +6,7 @@ public class StringRules {
     private int numberB = 1;
 
     public int stringFibonacciego(int n) {
-            for(int i = 1; i <= (n-2); i++) {
+            for(int i = 0; i <= (n-2); i++) {
                 sum = numberA + numberB;
                 numberA = numberB;
                 numberB = sum;
