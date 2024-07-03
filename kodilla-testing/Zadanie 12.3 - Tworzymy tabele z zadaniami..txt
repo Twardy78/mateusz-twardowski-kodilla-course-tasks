@@ -1,0 +1,40 @@
+CREATE TABLE ISSUESLIST
+(
+    ID SERIAL PRIMARY KEY,
+    NAME VARCHAR(100)
+);
+CREATE TABLE ISSUES
+(
+    ID SERIAL PRIMARY KEY,
+    ISSUESLIST_ID BIGINT UNSIGNED NOT NULL,
+    SUMMARY VARCHAR(500) NOT NULL,
+    DESCRIPTION VARCHAR(5000) NOT NULL,
+    USER_ID_ASSIGNEDTO BIGINT UNSIGNED NOT NULL,
+    FOREIGN KEY (ISSUESLIST_ID) REFERENCES ISSUESLIST(ID),
+    FOREIGN KEY (USER_ID_ASSIGNEDTO) REFERENCES USERS(ID)
+);
+SELECT * FROM ISSUES
+
+INSERT INTO ISSUESLIST VALUE (1, "ToDo");
+INSERT INTO ISSUESLIST VALUE (2,"In progress");
+INSERT INTO ISSUESLIST VALUE (3, "Done");
+
+SELECT * FROM ISSUESLIST;
+
+INSERT INTO ISSUES VALUE (1, 1, "Draft the initial project proposal", "Create a detailed project proposal ", 1);
+INSERT INTO ISSUES VALUE (2, 1, "Develop a project timeline", "Outline the project phases and set deadlines for each milestone.", 3);
+INSERT INTO ISSUES VALUE (3, 1, "Analyze current market trends", "Conduct research on market trends relevant to the project.", 3);
+INSERT INTO ISSUES VALUE (4, 1, "Organize a meeting with stakeholders", "prepare for an initial meeting to discuss project goals.", 5);
+INSERT INTO ISSUES VALUE (5, 1, "Create design mockups", "Develop initial design markups for the project's user interface.", 4);
+INSERT INTO ISSUES VALUE (6, 2, "Implement user login and registration", "Create a secure authentication system for user login.", 2);
+INSERT INTO ISSUES VALUE (7, 2, "Design the homepage", "Develop the frontend layout and design elements for the homepage", 1);
+INSERT INTO ISSUES VALUE (8, 2, "Payment API integration", "Integrate a third-party payment processing into the application.", 4);
+INSERT INTO ISSUES VALUE (9, 2, "User testing", "Organize user testing sessions to gather feedback and identify issues.", 3);
+INSERT INTO ISSUES VALUE (10, 2, "Database optimization", "Optimize SQL queries to improve database performance and reduce load times.", 5);
+INSERT INTO ISSUES VALUE (11, 3, "Configure development tools", "Set up the necessary development tools and environment for the project.", 4);
+INSERT INTO ISSUES VALUE (12, 3, "Initialize project repository", "Create and initialize a repository for version control.", 3);
+INSERT INTO ISSUES VALUE (13, 3, "Kick-off meeting", "Hold the initial project kick-off meeting with the team.", 2);
+INSERT INTO ISSUES VALUE (14, 3, "Requirements finalization", "Gather and finalize the project requirements document.", 4);
+INSERT INTO ISSUES VALUE (15, 3, "Logo design", "Create a logo for the project that represents its brand and identity.", 1);
+
+SELECT * FROM ISSUES;
