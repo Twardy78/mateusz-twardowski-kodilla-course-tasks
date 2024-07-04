@@ -7,10 +7,18 @@ public class Application {
         MinValueFromString minValueFromString = new MinValueFromString();
         int[] numbers = {3,1,5,6,7,9,15,3,4,7,10};
 
-        int maxValue = maxValueFromString.maxValueSearch(numbers);
-        System.out.println(maxValue);
+        try {
+            int maxValue = maxValueFromString.maxValueSearch(numbers);
+            System.out.println("Max number is: " + maxValue);
+        }catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+        }
 
-        int minValue = minValueFromString.minValueSearch(numbers);
-        System.out.println(minValue);
+        try {
+            int minValue = minValueFromString.minValueSearch(numbers);
+            System.out.println("Min number is: " + minValue);
+        }catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+        }
     }
 }
