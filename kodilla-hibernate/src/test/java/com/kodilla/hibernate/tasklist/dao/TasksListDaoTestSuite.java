@@ -1,7 +1,6 @@
-package com.kodilla.hibernate.taklist.dao;
+package com.kodilla.hibernate.tasklist.dao;
 
-import com.kodilla.hibernate.tasklist.TaskList;
-import com.kodilla.hibernate.tasklist.dao.TaskListDao;
+import com.kodilla.hibernate.tasklist.TasksList;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -10,28 +9,28 @@ import java.util.*;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @SpringBootTest
-public class TaskListDaoTestSuite {
+public class TasksListDaoTestSuite {
 
     private static final String SHOPPING = "Shopping List";
 
     @Autowired
-    private TaskListDao taskListDao;
+    private TasksListDao tasksListDao;
 
     @Test
     public void testFindByListName() {
         //Given
-        TaskList taskList = new TaskList(SHOPPING, "Buy vegetables and fruits");
+        TasksList taskList = new TasksList(SHOPPING, "Buy vegetables and fruits");
 
         //When
-        taskListDao.save(taskList);
+        tasksListDao.save(taskList);
 
         //Then
         int taskListId = taskList.getId();
-        Optional<TaskList> readTaskList = taskListDao.findById(taskListId);
-        assertTrue(readTaskList.isPresent());
+        Optional<TasksList> readTasksList = tasksListDao.findById(taskListId);
+        assertTrue(readTasksList.isPresent());
 
         //Clean up
-        taskListDao.deleteById(taskListId);
+        tasksListDao.deleteById(taskListId);
     }
 
 }

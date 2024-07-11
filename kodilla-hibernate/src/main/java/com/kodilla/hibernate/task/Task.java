@@ -1,18 +1,19 @@
 package com.kodilla.hibernate.task;
 
-
 import jakarta.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.Date;
 
 @Entity
 @Table(name = "TASKS")
-public class Task {
+public final class Task {
 
     private int id;
     private String description;
     private Date created;
     private int duration;
+    private TaskFinancialDetails taskFinancialDetails;
+    private TaskList taskList;
 
     public Task() {
     }
@@ -22,25 +23,49 @@ public class Task {
         this.created = new Date();
         this.duration = duration;
     }
+
     @Id
     @GeneratedValue
     @NotNull
-    @Column(name = "ID", unique=true)
+    @Column(name = "ID", unique = true)
     public int getId() {
         return id;
     }
+
     @Column(name = "DESCRIPTION")
     public String getDescription() {
         return description;
     }
+
     @NotNull
-    @Column(name = "CREATED")
+    @Column(name="CREATED")
     public Date getCreated() {
         return created;
     }
-    @Column(name = "DURATION")
+
+    @Column(name="DURATION")
     public int getDuration() {
         return duration;
+    }
+
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinColumn(name= "TASKS_FINANCIALS_ID")
+    public TaskFinancialDetails getTaskFinancialDetails() {
+        return taskFinancialDetails;
+    }
+
+    public void setTaskFinancialDetails(TaskFinancialDetails taskFinancialDetails) {
+        this.taskFinancialDetails = taskFinancialDetails;
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "TASKLISTS_ID")
+    public TaskList getTaskList() {
+        return taskList;
+    }
+
+    public void setTaskList(TaskList taskList) {
+        this.taskList = taskList;
     }
 
     public void setId(int id) {
