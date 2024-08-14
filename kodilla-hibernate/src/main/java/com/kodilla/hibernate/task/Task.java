@@ -6,7 +6,7 @@ import java.util.Date;
 
 @Entity
 @Table(name = "TASKS")
-public final class Task {
+public class Task {
 
     private int id;
     private String description;
@@ -58,7 +58,7 @@ public final class Task {
         this.taskFinancialDetails = taskFinancialDetails;
     }
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "TASKLISTS_ID")
     public TaskList getTaskList() {
         return taskList;
