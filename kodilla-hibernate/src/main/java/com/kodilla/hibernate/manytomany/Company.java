@@ -5,6 +5,12 @@ import java.util.*;
 import jakarta.persistence.*;
 import javax.validation.constraints.NotNull;
 
+@NamedNativeQuery(
+        name = "Company.findByPrefix",
+        query = "SELECT * FROM COMPANIES WHERE SUBSTRING(COMPANY_NAME, 1, 3) = :PREFIX",
+        resultClass = Company.class
+)
+
 @Entity
 @Table(name = "COMPANIES")
 public class Company {

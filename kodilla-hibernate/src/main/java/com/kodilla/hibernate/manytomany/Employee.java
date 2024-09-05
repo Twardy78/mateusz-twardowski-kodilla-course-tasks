@@ -7,6 +7,11 @@ import java.util.*;
 
 import javax.validation.constraints.NotNull;
 
+@NamedQuery(
+        name = "Employee.findByLastName",
+        query = "FROM Employee e WHERE e.lastname =:LASTNAME"
+)
+
 @Entity
 @Table(name = "EMPLOYEES")
 public class Employee {
