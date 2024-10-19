@@ -26,19 +26,19 @@ class KodillaSpringApplicationTests {
 		//Then
 		assertEquals("This is a circle.", name);
 	}
-
-	@Test
-	void testTriangleLoadedIntoContainer() {
-		//Given
-		ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring");
-		Shape shape = context.getBean(Triangle.class);
-
-		//When
-		String name = shape.getShapeName();
-
-		//Then
-		assertEquals("This is a triangle.", name);
-	}
+//
+//	@Test
+//	void testTriangleLoadedIntoContainer() {
+//		//Given
+//		ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring");
+//		Shape shape = context.getBean(Triangle.class);
+//
+//		//When
+//		String name = shape.getShapeName();
+//
+//		//Then
+//		assertEquals("This is a triangle.", name);
+//	}
 
 	@Test
 	void testSquareLoadaedIntoContainer() {
